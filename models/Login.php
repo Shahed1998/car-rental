@@ -14,17 +14,17 @@
 
                 if($result->num_rows > 0){
                     $result = $result->fetch_assoc();
-                    var_dump($result);
+                    return $result;
                 }else {
                     throw new CustomException("Unable to find user : custom");
                 }
 
             }
             catch(CustomException $e){
-                var_dump($e->errorMessage());
+                return $e->errorMessage();
             }
             catch(Exception $e){
-                var_dump($e->getMessage());
+                return $e->getMessage();
             }
         }
 
