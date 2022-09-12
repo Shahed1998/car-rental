@@ -2,7 +2,7 @@
     require "DB_Conn.php";
     require "CustomException.php";
 
-    class Login extends CustomException {
+    class Login {
         use DB_Conn;
         
         public function getUsers($conn, $username, $password){
@@ -14,17 +14,17 @@
 
                 if($result->num_rows > 0){
                     $result = $result->fetch_assoc();
-                    return $result;
+                    return [$result, True];
                 }else {
                     throw new CustomException("Unable to find user : custom");
                 }
 
             }
             catch(CustomException $e){
-                return $e->errorMessage();
+                return [$e->errorMessage(), False];
             }
             catch(Exception $e){
-                return $e->getMessage();
+                return [$e->getMessage(), False];
             }
         }
 

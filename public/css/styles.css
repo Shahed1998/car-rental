@@ -56,6 +56,7 @@ section {
 /* ---------------------------------- Login page */
 #login-page {
   background: #212121;
+  min-height: 100vh;
 }
 
 .login {
