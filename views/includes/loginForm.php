@@ -1,6 +1,6 @@
+<?php if(isset($_SESSION["uid"])){header("location:./dashboard.php");} ?>
 <section id="login-page">
     <div class="container">
-
         <!-- Only works when login fails -->
         <div class="row">
             <div class="col-12">
@@ -14,7 +14,6 @@
                 ?>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="login ">
