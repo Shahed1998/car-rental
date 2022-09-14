@@ -28,14 +28,15 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Sections
+              View 
             </a>
 
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-              <li><a class="dropdown-item" href="#">About</a></li>
-              <li><a class="dropdown-item" href="#">Cars</a></li>
-              <li><a class="dropdown-item" href="#">Services</a></li>
-              <li><a class="dropdown-item" href="#">Contact</a></li>
+            <ul id="dashViews" class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+              <li><a class="dropdown-item active home-link" href="#home" onclick="sectionClicked(dashHome, 'home-link')">Dashboard</a></li>
+              <li><a class="dropdown-item about-link" href="#about" onclick="sectionClicked(about, 'about-link')">About</a></li>
+              <li><a class="dropdown-item car-link" href="#cars" onclick="sectionClicked(cars, 'car-link')">Cars</a></li>
+              <li><a class="dropdown-item service-link" href="#services" onclick="sectionClicked(services, 'service-link')">Services</a></li>
+              <li><a class="dropdown-item contact-link" href="#contact" onclick="sectionClicked(contact, 'contact-link')">Contact</a></li>
             </ul>
           </div>
         </li>
