@@ -12,7 +12,8 @@ const setActiveDashBody = (section) => {
   section.classList.remove('d-none');
 };
 
-function sectionClicked(section, link) {
+function sectionClicked(e, section, link) {
+  e.preventDefault();
   setActiveDashBody(section);
   dashLinks.map((el) => el.classList.remove('active'));
   document.querySelector(`.${link}`).classList.add('active');
