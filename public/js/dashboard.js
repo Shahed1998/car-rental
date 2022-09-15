@@ -1,9 +1,9 @@
 // Dashboard specific
 const dashHome = document.querySelector('.dashHome');
-const about = document.querySelector('.about');
-const cars = document.querySelector('.cars');
-const services = document.querySelector('.services');
-const contact = document.querySelector('.contact');
+const about = document.querySelector('.dashAbout');
+const cars = document.querySelector('.dashCars');
+const services = document.querySelector('.dashServices');
+const contact = document.querySelector('.dashContact');
 const dashLinks = [...document.querySelectorAll('#dashViews .dropdown-item')];
 const allSections = [dashHome, about, cars, services, contact];
 

@@ -87,3 +87,18 @@ section {
   font-size: 20px;
   margin-top: 15px;
 }
+
+/* ---------------------------------- Dashboard */
+#dashViews li a {
+  cursor: pointer;
+}
+
+/* About section */
+.dashAbout h1 {
+  font-size: 2rem;
+}
+
+.dashAbout input,
+.dashAbout textarea {
+  margin-bottom: 1rem;
+}
