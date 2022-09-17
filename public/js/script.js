@@ -7,3 +7,10 @@ const setActive = (anc) => {
   });
   document.querySelector(`nav ul li .${anc}`).classList.add('active');
 };
+
+// Modal section
+const modal = (title, body) => {
+  document.querySelector('.modal-title').textContent = title;
+  document.querySelector('.modal-body').textContent = body;
+  document.getElementById('modalBtn').click();
+};
