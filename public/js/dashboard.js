@@ -25,6 +25,10 @@ const dashAboutForm = () => {
   const subHeading1 = form[1].value;
   const subHeading2 = form[2].value;
   const subHeading3 = form[3].value;
+  const description = form[4].value;
+  const image = form[5];
+  // alert(form[5].value);
+  // return false;
 
   // heading validation
   if (heading.length <= 0 || heading.length >= 50) {
@@ -39,6 +43,25 @@ const dashAboutForm = () => {
     subHeading3.length <= 0
   ) {
     modal('Sub heading points 💥', 'Sub heading points must not be empty');
+    return false;
+  }
+
+  // description validation
+  if (description.length <= 0) {
+    modal('Description 💥', 'Description must not be empty');
+    return false;
+  }
+
+  // image validation
+  if (
+    image.value &&
+    (image.files[0].size > 2000000 ||
+      !['image/jpeg', 'image/jpg', 'image/png'].includes(image.files[0].type))
+  ) {
+    modal(
+      'Image 💥',
+      'Invalid image. Allowed image formats: jpg, jpeg, png, and allowed image size upto: 2MB'
+    );
     return false;
   }
 
