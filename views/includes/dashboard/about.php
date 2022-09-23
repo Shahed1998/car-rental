@@ -27,7 +27,7 @@
              type="password" name="password" id="password" class="w-100 p-2"
              value="" placeholder="Enter password to update" >
 
-            <input type="submit" class="btn btn-primary w-100 p-3" value="Update">
+            <input type="submit" name="aboutFormSubmitBtn" class="btn btn-primary w-100 p-3" value="Update">
         </form>
     </div>
 </div>

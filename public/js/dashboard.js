@@ -19,6 +19,7 @@ const sectionClicked = (e, section, link) => {
   document.querySelector(`.${link}`).classList.add('active');
 };
 
+// ------------------------------------------ Dashboard about section
 const dashAboutForm = () => {
   const form = document.getElementById('dashAboutForm').elements;
   const heading = form[0].value;
@@ -27,8 +28,13 @@ const dashAboutForm = () => {
   const subHeading3 = form[3].value;
   const description = form[4].value;
   const image = form[5];
-  // alert(form[5].value);
-  // return false;
+  const password = form[6].value;
+
+  // password field
+  if (!password) {
+    modal('Password 💥', 'Password field must not be empty');
+    return false;
+  }
 
   // heading validation
   if (heading.length <= 0 || heading.length >= 50) {
