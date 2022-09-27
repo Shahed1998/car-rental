@@ -6,7 +6,8 @@
     class Dashboard {
         use DB_Conn;
 
-        public function aboutSection($conn){
+        // ------------------------------------------ About section
+        public function getAboutSectionFieldContent($conn){
             try{
 
                 $sql = "SELECT * FROM about";

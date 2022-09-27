@@ -32,7 +32,7 @@
             </a>
 
             <ul id="dashViews" class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-              <li><a class="dropdown-item active home-link" onclick="sectionClicked(event,dashHome,'home-link')">Dashboard</a></li>
+              <li><a class="dropdown-item active home-link" onclick="sectionClicked(event,dashHome,'home-link')">Profile</a></li>
               <li><a class="dropdown-item about-link" onclick="sectionClicked(event,about,'about-link')">About</a></li>
               <li><a class="dropdown-item car-link" onclick="sectionClicked(event,cars,'car-link')">Cars</a></li>
               <li><a class="dropdown-item service-link" onclick="sectionClicked(event,services,'service-link')">Services</a></li>

@@ -94,7 +94,8 @@ section {
 }
 
 /* About section */
-.dashAbout h1 {
+.dashAbout h1,
+.dashHome h1 {
   font-size: 2rem;
 }
 
