@@ -73,3 +73,24 @@ const dashAboutForm = () => {
 
   return true;
 };
+
+// ------------------------------------------ Profile edit
+const profileForm = document.getElementById('dashProfileForm').elements;
+
+// show password checkbox
+document.querySelector('#show_pass').addEventListener('click', () => {
+  const new_pass = profileForm[2]; // new password
+  const confirm_new_pass = profileForm[3]; // confirm new password
+  const show_pass = profileForm[4];
+  if (show_pass.checked) {
+    new_pass.type = 'text';
+    confirm_new_pass.type = 'text';
+  } else {
+    new_pass.type = 'password';
+    confirm_new_pass.type = 'password';
+  }
+});
+
+const profileEditSubmit = () => {
+  return false;
+};

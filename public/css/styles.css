@@ -100,6 +100,7 @@ section {
 }
 
 .dashAbout input,
-.dashAbout textarea {
+.dashAbout textarea,
+.dashHome input {
   margin-bottom: 1rem;
 }
