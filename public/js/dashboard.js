@@ -1,4 +1,4 @@
-// Dashboard specific
+// ------------------------------------------ Dashboard specific
 const dashHome = document.querySelector('.dashHome');
 const about = document.querySelector('.dashAbout');
 const cars = document.querySelector('.dashCars');
@@ -29,7 +29,6 @@ const dashAboutForm = () => {
   const description = form[4].value;
   const image = form[5];
   const password = form[6].value;
-
   // password field
   if (!password) {
     modal('Password 💥', 'Password field must not be empty');
@@ -38,7 +37,10 @@ const dashAboutForm = () => {
 
   // heading validation
   if (heading.length <= 0 || heading.length >= 50) {
-    modal('Heading 💥', 'Heading must be between 1 and 50 characters long');
+    modal(
+      'Heading 💥',
+      `You have entered ${heading.length} characters. Heading must be between 1 and 50 characters long`
+    );
     return false;
   }
 
@@ -75,10 +77,9 @@ const dashAboutForm = () => {
 };
 
 // ------------------------------------------ Profile edit
-const profileForm = document.getElementById('dashProfileForm').elements;
-
 // show password checkbox
 document.querySelector('#show_pass').addEventListener('click', () => {
+  const profileForm = document.getElementById('dashProfileForm').elements;
   const new_pass = profileForm[2]; // new password
   const confirm_new_pass = profileForm[3]; // confirm new password
   const show_pass = profileForm[4];
@@ -92,5 +93,17 @@ document.querySelector('#show_pass').addEventListener('click', () => {
 });
 
 const profileEditSubmit = () => {
+  const profileForm = document.getElementById('dashProfileForm').elements;
+  // username validation
+  if (
+    !(profileForm[0].value.length >= 5 && profileForm[0].value.length <= 100)
+  ) {
+    modal(
+      `Username 💥`,
+      `You have entered ${profileForm[0].value.length} characters.
+      Username must be between 5 and 100 characters long.`
+    );
+    return false;
+  }
   return false;
 };

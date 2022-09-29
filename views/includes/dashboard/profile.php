@@ -1,6 +1,6 @@
 <div class="dashHome container min-vh-100 d-flex align-items-center justify-content-center ">
     <div class="p-5">
-        <h1 class="text-center">User information</h1>
+        <h1 class="text-center">Your information</h1>
         <!-- <?php var_dump($_SESSION) ?> -->
         <form action="" id="dashProfileForm" method="post" onsubmit="return profileEditSubmit()">
             <!-- Username -->
