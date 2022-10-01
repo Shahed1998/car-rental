@@ -9,6 +9,6 @@
     include("./includes/dashboard/services.php");
     include("./includes/dashboard/contact.php");
 ?>
-<script src="../public/js/dashboard.js?v=<?= time(); ?>"></script>
+<script src="../public/js/dashboard.js?v=<?= time();?>"></script>
 <?php include("./includes/footer.php"); ?>
 

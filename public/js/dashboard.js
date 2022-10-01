@@ -94,16 +94,51 @@ document.querySelector('#show_pass').addEventListener('click', () => {
 
 const profileEditSubmit = () => {
   const profileForm = document.getElementById('dashProfileForm').elements;
+  // password validation
+  if (!profileForm['u_profile_password'].value) {
+    modal(
+      `Password 💥`,
+      `You have entered ${profileForm['u_profile_password'].value.length} characters.
+      Password is required to update.`
+    );
+    return false;
+  }
   // username validation
   if (
-    !(profileForm[0].value.length >= 5 && profileForm[0].value.length <= 100)
+    !(
+      profileForm['uname'].value.length >= 5 &&
+      profileForm['uname'].value.length <= 100
+    )
   ) {
     modal(
       `Username 💥`,
-      `You have entered ${profileForm[0].value.length} characters.
+      `You have entered ${profileForm['uname'].value.length} characters.
       Username must be between 5 and 100 characters long.`
     );
     return false;
   }
+  // new password validation
+  if (
+    profileForm['new_password'].value &&
+    !profileForm['confirm_new_password'].value
+  ) {
+    modal(
+      `New password 💥`,
+      `You have entered ${profileForm['confirm_new_password'].value.length} characters.
+      Password confirmation is required.`
+    );
+    return false;
+  } else if (
+    !profileForm['new_password'].value &&
+    profileForm['confirm_new_password'].value
+  ) {
+    modal(
+      `New password 💥`,
+      `You have entered ${profileForm['new_password'].value.length} characters.
+      New password is required.`
+    );
+    return false;
+  }
+
   return false;
 };
