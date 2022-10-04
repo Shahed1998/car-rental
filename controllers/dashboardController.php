@@ -24,10 +24,21 @@
     $dashboard->closeConn($conn);
 
     // ------------------------------- On form submission ----------------------
-    // About form
-    if ($_SERVER["REQUEST_METHOD"]=="POST" && $_POST["aboutFormSubmitBtn"]=="Update"){
-        // $password = $_POST["password"];
-        
+    // Profile form
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        // Profile form
+        if ($_POST["formSubmitBtn"] == "profile"){
+            $password = $_POST["u_profile_password"];
+            // if (password_verify($password, hash_stored_in_db ))
+            // echo password_hash($password, PASSWORD_BCRYPT, ['cost'=>12]);
+        }
+
+        // About form
+        if ($_POST["formSubmitBtn"] == "about"){
+            echo "about";
+        }
     }
+    
 
 ?>

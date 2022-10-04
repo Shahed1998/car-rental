@@ -32,7 +32,7 @@
             <label for="show_pass">Show new password</label>
 
             <!-- Form submit button -->
-            <input type="submit" name="profileFormSubmitBtn" value="Update" class="btn btn-primary w-100 p-3">
+            <input type="submit" name="formSubmitBtn" value="profile" class="btn btn-primary w-100 p-3">
         </form>
     </div>
 </div>

@@ -19,7 +19,7 @@ const sectionClicked = (e, section, link) => {
   document.querySelector(`.${link}`).classList.add('active');
 };
 
-// ------------------------------------------ Dashboard about section
+// ------------------------------------------ About section validation
 const dashAboutForm = () => {
   const form = document.getElementById('dashAboutForm').elements;
   const heading = form[0].value;
@@ -76,7 +76,7 @@ const dashAboutForm = () => {
   return true;
 };
 
-// ------------------------------------------ Profile edit
+// ------------------------------------------ Profile edit validation
 // show password checkbox
 document.querySelector('#show_pass').addEventListener('click', () => {
   const profileForm = document.getElementById('dashProfileForm').elements;
@@ -140,5 +140,5 @@ const profileEditSubmit = () => {
     return false;
   }
 
-  return false;
+  return true;
 };
