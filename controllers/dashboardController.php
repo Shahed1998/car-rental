@@ -1,5 +1,5 @@
 <?php
-    include("../models/Dashboard.php");
+    include("../models/DashboardModel.php");
     session_start();
     
     if(!isset($_SESSION["uid"])){
@@ -30,8 +30,7 @@
         // Profile form
         if ($_POST["formSubmitBtn"] == "profile"){
             $password = $_POST["u_profile_password"];
-            // if (password_verify($password, hash_stored_in_db ))
-            // echo password_hash($password, PASSWORD_BCRYPT, ['cost'=>12]);
+            
         }
 
         // About form
