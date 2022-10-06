@@ -1,10 +1,3 @@
-<?php if(isset($_SESSION["uid"]) && isset($_SESSION["user"])){
-        if($_SESSION["user"] == 1){
-            header("location:./dashboardAdmin.php");
-        }else if ($_SESSION["user"] == 2){
-            header("location:./dashboardCustomer.php");
-        }
-    } ?>
 <section id="login-page">
     <div class="container">
         <!-- Only works when login fails -->

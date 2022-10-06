@@ -3,7 +3,7 @@
     session_start();
     
     if(!isset($_SESSION["uid"]) || $_SESSION["user"] != 1){
-        header("location: ./logout.php");
+       return header("location: ./login.php");
     }
 
     // ------------------------------- On page load ----------------------

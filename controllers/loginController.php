@@ -2,6 +2,14 @@
     include("../models/Login.php"); 
     session_start();
 
+    if(isset($_SESSION["uid"]) && isset($_SESSION["user"])){
+        if($_SESSION["user"] == 1){
+            header("location:./dashboardAdmin.php");
+        }else if ($_SESSION["user"] == 2){
+            header("location:./dashboardCustomer.php");
+        }
+    }
+
     if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["login"] == "Sign in"){
         $username = htmlentities($_POST["username"]);
         $password = htmlentities($_POST["password"]);
@@ -20,10 +28,10 @@
 
             if ($res[0]["user"] == 1){
                 $_SESSION["user"] = $res[0]["user"];
-                header("location: ./dashboardAdmin.php");
+                return header("location: ./dashboardAdmin.php");
             } else if ($res[0]["user"] == 2){
                 $_SESSION["user"] = $res[0]["user"];
-                header("location: ./dashboardCustomer.php");
+                return header("location: ./dashboardCustomer.php");
             }
         }
         

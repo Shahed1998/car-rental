@@ -1,5 +1,5 @@
 <?php  
-    include("../controllers/dashboardController.php");
+    include("../controllers/adminDashboardController.php");
     include("./includes/header.php");
     include("./includes/modal.php");
     include("./includes/dashboard/dashNav.php"); 
