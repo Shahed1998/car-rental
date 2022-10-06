@@ -17,7 +17,14 @@
             $_SESSION["uname"] = 
                 // capitalize the first letter 
                 strtoupper($res[0]["username"][0]).strtolower(substr($res[0]["username"],1));
-            header("location: ./dashboard.php");
+
+            if ($res[0]["user"] == 1){
+                $_SESSION["user"] = $res[0]["user"];
+                header("location: ./dashboardAdmin.php");
+            } else if ($res[0]["user"] == 2){
+                $_SESSION["user"] = $res[0]["user"];
+                header("location: ./dashboardCustomer.php");
+            }
         }
         
         $login->closeConn($conn);

@@ -2,10 +2,10 @@
     include("../models/DashboardModel.php");
     session_start();
     
-    if(!isset($_SESSION["uid"])){
+    if(!isset($_SESSION["uid"]) || $_SESSION["user"] != 1){
         header("location: ./logout.php");
     }
-    
+
     // ------------------------------- On page load ----------------------
     $dashboard = new Dashboard();
     $conn = $dashboard->openConn();
