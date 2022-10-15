@@ -9,10 +9,10 @@
     // ------------------------------- On page load ----------------------
     $dashboard = new Dashboard();
     $conn = $dashboard->openConn();
-
+    $uc_id = strtolower($_SESSION["uid"]);
+    $about = $dashboard->getFieldContent($conn, $uc_id);
+    
     // About section 
-    $about = $dashboard->getAboutSectionFieldContent($conn);
-
     if ($about[1]){
         $_SESSION["dashAboutHeading"] = $about[0]["heading"];
         $_SESSION["dashAboutSub_heading"] = explode(', ',$about[0]["sub_heading"]);
