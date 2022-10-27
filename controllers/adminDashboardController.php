@@ -10,10 +10,11 @@
     $dashboard = new Dashboard();
     $conn = $dashboard->openConn();
     $uc_id = strtolower($_SESSION["uid"]);
-    $about = $dashboard->getFieldContent($conn, $uc_id);
+    $about = $dashboard->getAdminFieldContent($conn, $uc_id);
     
     // About section 
     if ($about[1]){
+        $_SESSION['uname'] = $about[0]["username"];
         $_SESSION["dashAboutHeading"] = $about[0]["heading"];
         $_SESSION["dashAboutSub_heading"] = explode(', ',$about[0]["sub_heading"]);
         $_SESSION["dashAboutDescription"] = $about[0]["description"];

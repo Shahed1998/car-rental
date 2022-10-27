@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#dashHome"><?= $_SESSION["uname"]."'s dashboard" ?></a>
+    <a class="navbar-brand" href="#dashHome"><?="Dashboard (".$_SESSION["uname"].") "?></a>
     <button
       class="navbar-toggler"
       type="button"

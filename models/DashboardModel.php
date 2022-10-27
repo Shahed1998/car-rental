@@ -7,7 +7,7 @@
         use DB_Conn;
 
         // ------------------------------------------ About section
-        public function getFieldContent($conn, $uc_id){
+        public function getAdminFieldContent($conn, $uc_id){
             try{
 
                 $sql = "SELECT 
@@ -23,7 +23,7 @@
 
                 if($result->num_rows == 1){
                     $result = $result->fetch_assoc();
-                    var_dump($result);
+                    // var_dump($result);
                     return [$result, True];
                 }else {
                     throw new CustomException("Unable to find user : custom");

@@ -22,9 +22,6 @@
             $_SESSION["error"] = "User does not exist";
         }else {
             $_SESSION["uid"] = $res[0]["id"];
-            $_SESSION["uname"] = 
-                // capitalize the first letter 
-                strtoupper($res[0]["username"][0]).strtolower(substr($res[0]["username"],1));
 
             if ($res[0]["user"] == 1){
                 $_SESSION["user"] = $res[0]["user"];
